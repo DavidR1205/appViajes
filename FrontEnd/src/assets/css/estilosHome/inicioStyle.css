@@ -1,0 +1,73 @@
+/*Banner*/
+
+.Banner {
+    background-color: aqua;
+    position: relative;
+    top: 8px;
+    margin: -8px;
+    justify-content: center;
+    display: flex;
+    height: 500px;
+}
+
+.bannerInicio {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+/*----------------------*/
+
+/*Descripcion*/
+.contDescription {
+    margin: 40px 100px;
+    padding: 0 50px;
+}
+
+.contDescription h1 {
+    text-align: center;
+}
+
+.contDescription p{
+    font-size: 18px;
+}
+/*---------------------------*/
+
+/*Valores Descripcion*/
+.contBase {
+    display: flex;
+    margin: 80px 290px;
+}
+
+.contBase div {
+    margin: 0 50px;
+    width: 100%;
+}
+
+.contBase h3 {
+    text-align: center;
+}
+/*--------------------*/
+
+/*Enlaces*/
+.titleEnlaces {
+    text-align: center;
+    font-size: 19px;
+}
+
+.contEnlaces {
+    display: flex;
+    margin: 80px 290px;
+    justify-content: center;
+    gap: 90px;
+}
+
+.contEnlaces a img {
+    width: 220px;
+    border-radius: 100px;
+}
+
+.contEnlaces p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+}

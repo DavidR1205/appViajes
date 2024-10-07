@@ -1,0 +1,79 @@
+* {
+    font-family: Calibri;
+}
+
+.navegacion {
+    display: flex;
+    background-color: rgb(0, 32, 43);
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logoNav img{
+    width: 50px;
+    height: 50px;
+}
+
+.listaNav li{
+    list-style: none;
+    display: inline;
+    margin: 0px;
+}
+
+.link {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.link:hover {
+    background-color: rgba(3, 77, 102, 0.719);
+}
+
+.footer {
+    background-color: rgb(0, 32, 43);
+    margin: -8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: center;
+}
+
+.infoFooter {
+    color: white;
+    width: 300px;
+    height: 250px;
+    position: relative;
+    right: 170px;
+    top: 20px;
+}
+
+.contImage {
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    height: 350px;
+    position: relative;
+    right: 350px;
+}
+
+.imgFooter {
+    width: 350px;
+    height: 350px;
+}
+
+.contCopy {
+    color:white;
+    align-items: center;
+    height: 40px;
+    position: relative;
+    margin-top: -40px;
+    padding-bottom: 10px;
+}

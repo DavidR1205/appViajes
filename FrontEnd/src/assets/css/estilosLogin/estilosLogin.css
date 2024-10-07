@@ -1,0 +1,91 @@
+/*body {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #00202b;
+    color: #fff;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height: 100vh;
+    margin: 0;
+}*/
+
+.container {
+    display: flex;
+    background-color: #00202b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    text-align: left;
+}
+
+.user {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+
+  .user img {
+    width: 150px; 
+    height: auto;
+    border-radius: 50%; 
+  }
+  
+
+.logo img {
+    width: 200px;
+    height: 200px;
+    align-items: left;
+}
+
+.login-form {
+    max-width: auto;
+    justify-content: center;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.login-form label {
+    display:flex;
+    margin-bottom: 5px;
+    justify-content: center;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 10px;
+    border-color: black;
+    border-radius: 5px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00202b;
+    border:black;
+    border-color: black;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color:black;
+}
+
+/*header {
+    background-color: #00202b;
+}*/
