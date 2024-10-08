@@ -1,6 +1,7 @@
 import React from 'react'
 import "../../assets/css/estilosAdmin/estilos.css"
 
+
 const footerAdmin = () => {
   return (
     <div>

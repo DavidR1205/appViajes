@@ -6,9 +6,9 @@ import runtLogo from "../../assets/image/homeImage/runt.jpg"
 const Home = () => {
     return (
         <div>
-            <div className="Banner">
-                <img src={bannerInicio} className="bannerInicio" />
-            </div>
+
+            <img src={bannerInicio} className="d-block w-100 imagenBanner" alt="" />
+
             <div className="contDescription">
                 <h1>Quienes somos</h1>
                 <p>En Cootransporte S.A.S., somos una empresa comprometida con ofrecer soluciones de movilidad eficientes, seguras y accesibles en el área metropolitana.
@@ -30,17 +30,17 @@ const Home = () => {
             <div className="contBase">
                 <div>
                     <h3>Estabilidad Laboral</h3>
-                    <p>En Cootransporte S.A.S., creemos en el bienestar y el desarrollo de nuestros colaboradores. 
+                    <p>En Cootransporte S.A.S., creemos en el bienestar y el desarrollo de nuestros colaboradores.
                         Fomentamos un entorno laboral seguro y equitativo, donde cada empleado puede crecer profesionalmente. </p>
                 </div>
                 <div>
                     <h3>Administracion</h3>
-                    <p>Nos enorgullece contar con una gestión eficiente y transparente, orientada a optimizar 
+                    <p>Nos enorgullece contar con una gestión eficiente y transparente, orientada a optimizar
                         los recursos y garantizar la sostenibilidad de la empresa.</p>
                 </div>
                 <div>
                     <h3>Servicio</h3>
-                    <p>El servicio es el corazón de nuestra operación. En Cootransporte S.A.S., estamos comprometidos con brindar una experiencia de 
+                    <p>El servicio es el corazón de nuestra operación. En Cootransporte S.A.S., estamos comprometidos con brindar una experiencia de
                         transporte segura, puntual y confortable a cada uno de nuestros usuarios.</p>
                 </div>
             </div>
@@ -52,7 +52,7 @@ const Home = () => {
             <div className="contEnlaces">
                 <div>
                     <a href="https://www.metropol.gov.co/">
-                    <img src={areaLogo} alt="" />
+                        <img src={areaLogo} alt="" />
                     </a>
                     <p>Area Metropolitana</p>
                 </div>
