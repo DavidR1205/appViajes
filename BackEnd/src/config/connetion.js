@@ -8,14 +8,14 @@ const stringConnetion={
     server:process.env.SERVER,
     database:process.env.DATABASE,
     options:{
-        trsutServerCertificate:true,
+        trustServerCertificate: true,
     },
 };
 
 const getConnetion=async()=>{
     try {
         await sql.connect(stringConnetion);
-        console.log('conectado mono es gay')
+        console.log('Conectado con Exito')
     } catch (error) {
         console.log('error',error);
         process.exit(1);
