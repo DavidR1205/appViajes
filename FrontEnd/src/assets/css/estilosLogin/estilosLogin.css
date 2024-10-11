@@ -1,15 +1,15 @@
-/*body {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.login-page {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: #00202b;
     color: #fff;
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     margin: 0;
-}*/
+}
 
-.container {
+.login-page .container {
     display: flex;
     background-color: #00202b;
     padding: 20px;
@@ -19,49 +19,47 @@
     align-items: center;
 }
 
-.logo {
+.login-page .logo {
     width: 200px;
     height: 200px;
     text-align: left;
 }
 
-.user {
+.login-page .user {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-  }
-  
+}
 
-  .user img {
+.login-page .user img {
     width: 150px; 
     height: auto;
     border-radius: 50%; 
-  }
-  
+}
 
-.logo img {
+.login-page .logo img {
     width: 200px;
     height: 200px;
     align-items: left;
 }
 
-.login-form {
+.login-page .login-form {
     max-width: auto;
     justify-content: center;
 }
 
-.login-form h2 {
+.login-page .login-form h2 {
     margin-bottom: 20px;
     justify-content: center;
 }
 
-.login-form label {
+.login-page .login-form label {
     display:flex;
     margin-bottom: 5px;
     justify-content: center;
 }
 
-.login-form input {
+.login-page .login-form input {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -70,7 +68,7 @@
     border-radius: 5px;
 }
 
-.login-form button {
+.login-page .login-form button {
     width: 100%;
     padding: 10px;
     background-color: #00202b;
@@ -82,10 +80,10 @@
     cursor: pointer;
 }
 
-.login-form button:hover {
+.login-page .login-form button:hover {
     background-color:black;
 }
 
-/*header {
+header {
     background-color: #00202b;
-}*/
+}

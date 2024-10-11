@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, useLocation } from "react-router-dom"
 import LayoutPrincipal from "../src/layout/layoutPrincipal"
 import LayoutAdmin from "./layout/layoutAdmin"
-import LayoutLogin from "./layout/layoutLogin"
+import LayoutLogin from "../src/layout/layoutLogin"
 import Routes from "./router/router"
 
 function App() {
