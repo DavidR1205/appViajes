@@ -1,14 +1,17 @@
 import React from 'react'
-import "../../assets/css/estilosAdmin/estilos.css"
+import "../../assets/css/estilosLogin/estilosLogin.css"
 
-const footerLogin = () => {
+const Footer = () => {
   return (
-    <div>
-      <div className="contCopy">
-        <p className="copyFooter">© Todos los derechos reservados - Cootransporte S.A.S - 2024</p>
-      </div>
+    <footer class="footer">
+    <div class="footer-container">
     </div>
+    <div class="footer-bottom">
+      <p>© Todos los derechos reservados - Cootransporte S.A.S - 2024</p>
+    </div>
+  </footer>
+  
   )
 }
 
-export default footerLogin
+export default Footer
