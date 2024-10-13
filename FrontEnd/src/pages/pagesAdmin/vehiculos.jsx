@@ -24,7 +24,7 @@ const vehiculos = () => {
     <div className="tabla-container">
 
       <div className="add-button-container">
-        <button className="add-button">Agregar</button>
+        <button className="btn btn-success">Agregar</button>
       </div>
 
 
@@ -46,8 +46,8 @@ const vehiculos = () => {
               <td>{c.marca}</td>
               <td>{c.modelo}</td>
               <td>
-                <button className="ver-mas-button">Editar</button>
-                <button className="ver-mas-button">Eliminar</button>
+                <button className="btn btn-warning">Editar</button>
+                <button className="btn btn-danger">Eliminar</button>
               </td>
             </tr>
           )}
