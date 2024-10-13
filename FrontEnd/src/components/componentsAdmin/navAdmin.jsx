@@ -58,7 +58,7 @@ const navAdmin = () => {
                 <Link to="/iniciar-sesion">
                   <img src={iniciarsesionlogo} alt="Iniciar Sesión Logo" style={{ width: '40px', marginTop: '5px' }} />
                 </Link>
-                <Link className="nav-link small-link" to="/iniciar-sesion" style={{ fontSize: '18px' }}>Cerrar Sesión</Link>
+                <Link className="nav-link small-link" to="/login" style={{ fontSize: '18px' }}>Cerrar Sesión</Link>
               </li>
             </ul>
           </div>

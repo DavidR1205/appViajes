@@ -35,6 +35,7 @@ const vehiculos = () => {
             <th className="custom-header">Placa</th>
             <th className="custom-header">Marca</th>
             <th className="custom-header">Modelo</th>
+            <th className="custom-header">Tipo</th>
             <th className="custom-header">Acciones</th>
           </tr>
         </thead>
@@ -45,6 +46,7 @@ const vehiculos = () => {
               <td>{c.placa}</td>
               <td>{c.marca}</td>
               <td>{c.modelo}</td>
+              <td>{c.tipo_vehiculo}</td>
               <td>
                 <button className="btn btn-warning">Editar</button>
                 <button className="btn btn-danger">Eliminar</button>
