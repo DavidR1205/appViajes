@@ -1,7 +1,10 @@
 import React from 'react';
 import "../../assets/css/estilosAdmin/estilostabla.css"
+import useAuth from "../../hooks/UseAuth.js"
 
 const TablaConDatos = () => {
+  useAuth();
+
   const datos = [
     { conductor: 'Juan Pérez', vehiculo: 'Autobús', ruta: 'Ruta 1', placa: 'ABC123', horaSalida: '08:00 AM', destino: 'Centro' },
     { conductor: 'Carlos Gómez', vehiculo: 'Autobús', ruta: 'Ruta 2', placa: 'XYZ789', horaSalida: '09:00 AM', destino: 'Sur' },

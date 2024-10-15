@@ -1,7 +1,10 @@
+import useAuth from "../../hooks/UseAuth.js"
 import { getAllVehiculos } from "../../services/VehiculosServices.js"
 import { useEffect, useState } from "react"
 
 const vehiculos = () => {
+
+  useAuth();
 
   const [vehiculos, setVehiculos] = useState([])
   const [erro, setError] = useState('')

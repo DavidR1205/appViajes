@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo2 from "../../assets/image/adminImage/logo2.png";
 import programarlogo from "../../assets/image/adminImage/programarlogo.png";
 import conductoreslogo from '../../assets/image/adminImage/conductoreslogo.png';
@@ -10,6 +10,13 @@ import "../../assets/css/estilosAdmin/estilos.css"
 
 
 const navAdmin = () => {
+  const navigate = useNavigate();
+  
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    navigate('/login')
+  }
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark navbar-custom" style={{ height: '60px' }}>
@@ -58,7 +65,7 @@ const navAdmin = () => {
                 <Link to="/iniciar-sesion">
                   <img src={iniciarsesionlogo} alt="Iniciar Sesión Logo" style={{ width: '40px', marginTop: '5px' }} />
                 </Link>
-                <Link className="nav-link small-link" to="/login" style={{ fontSize: '18px' }}>Cerrar Sesión</Link>
+                <Link className="nav-link small-link" to="/login" style={{ fontSize: '18px' }} onClick={handleLogout}>Cerrar Sesión</Link>
               </li>
             </ul>
           </div>
