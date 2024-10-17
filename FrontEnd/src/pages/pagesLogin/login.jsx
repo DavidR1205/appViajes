@@ -1,6 +1,5 @@
 import '../../assets/css/estilosLogin/estilosLogin.css'
 import logo from '../../assets/image/loginImage/logo.png'
-import usuario from '../../assets/image/loginImage/usuario.png'
 import { Link, useNavigate } from 'react-router-dom'
 import React, { useState } from 'react'
 import axios from 'axios'
@@ -13,11 +12,11 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault()
-  
+
 
     try {
       const response = await axios.get('http://localhost:8082/login', {
-        params: { correo: correo, contrasena: contrasena},
+        params: { correo: correo, contrasena: contrasena },
       });
 
       if (response.data && response.data.length > 0) {
@@ -36,27 +35,23 @@ const Login = () => {
   return (
     <>
       <div className='login-page'>
-        <div className='user'>
-          <Link to="/">
-            <img src={usuario} alt="Logo Usuario" />
-          </Link>
-        </div>
-
-        <div className='container'>
-          <div className="logo">
+        <div className='containerLogin'>
+          <div className="logoLogin">
             <Link to="/">
-              <img src={logo} alt="Logo de COOTRANSPORTE"/>
+              <img src={logo} className='imageLogin' alt="Logo de COOTRANSPORTE" />
             </Link>
-          </div>
-          <div className="login-form">
-            <h2>Iniciar Sesión</h2>
-            <form onSubmit={handleLogin}>
-              <label htmlFor="email">Correo:</label>
-              <input type="email" id="email" name="email" value={correo} onChange={(e) => setCorreo(e.target.value)} required />
-              <label htmlFor="password">Contraseña:</label>
-              <input type="password" id="password" name="password" value={contrasena} onChange={(e) => setContrasena(e.target.value)}  required />
-              <button type="submit">Ingresar</button>
-            </form>
+            <div className='containerTitle'>
+              <h2 className="titleLogin">Iniciar Sesión</h2>
+            </div>
+            <div className="login-form">
+              <form onSubmit={handleLogin}>
+                <label htmlFor="email">Correo:</label><br />
+                <input type="email" id="email" name="email" value={correo} onChange={(e) => setCorreo(e.target.value)} required /><br />
+                <label htmlFor="password">Contraseña:</label><br />
+                <input type="password" id="password" name="password" value={contrasena} onChange={(e) => setContrasena(e.target.value)} required /><br />
+                <button type="submit" className='botonLogin'>Ingresar</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

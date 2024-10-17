@@ -1,89 +1,99 @@
-.login-page {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: #00202b;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.login-page .container {
-    display: flex;
-    background-color: #00202b;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-.login-page .logo {
-    width: 200px;
-    height: 200px;
-    text-align: left;
-}
-
-.login-page .user {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.login-page .user img {
-    width: 150px; 
+.logoLogin {
     height: auto;
-    border-radius: 50%; 
-}
-
-.login-page .logo img {
-    width: 200px;
-    height: 200px;
-    align-items: left;
-}
-
-.login-page .login-form {
-    max-width: auto;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+    position: relative;
 }
 
-.login-page .login-form h2 {
-    margin-bottom: 20px;
-    justify-content: center;
+.imageLogin {
+    width: 20vh;
+    height: 20vh;
 }
 
-.login-page .login-form label {
-    display:flex;
-    margin-bottom: 5px;
-    justify-content: center;
-}
-
-.login-page .login-form input {
+.login-page {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 10px;
-    border-color: black;
-    border-radius: 5px;
+    height: 91.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-.login-page .login-form button {
+.containerLogin {
+    flex-grow: 1;
+    background-color: rgb(0, 32, 43);
+    display: flex;
+    width: 500px;
+    height: 650px;
+    color: white;
+    border-radius: 40px;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 500px;
+    max-height: 80vh;
+}
+
+.login-form {
     width: 100%;
-    padding: 10px;
-    background-color: #00202b;
-    border:black;
-    border-color: black;
+    font-size: 19px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    top: 30px;
+    align-items: center;
+}
+
+.login-form input {
     border-radius: 10px;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
+    width: 100%;
+    /*border: 1px solid black;*/
+    border: none;
+    margin-bottom: 5%;
+    outline: none;
+    padding: 3px 8px;
+    font-size: 17px;
 }
 
-.login-page .login-form button:hover {
-    background-color:black;
+.botonLogin {
+    background-color: rgb(166, 225, 229);
+    border: 1px solid black;
+    color: rgb(0, 0, 0);
+    font-size: 20.5px;
+    font-weight: 500;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    position: relative;
+    top: 30px;
+    transition: background-color 0.4s ease, color 0.4s ease
 }
 
-header {
-    background-color: #00202b;
+.botonLogin:hover {
+    background-color: white;
+}
+
+.containerTitle {
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    top: 4vh;
+}
+
+.titleLogin {
+    font-size: 30px;
+}
+
+.footer-login {
+    background-color: rgb(0, 32, 43);
+    color: white;
+    width: 100%;
+    height: 5vh;
+    position: fixed;
+    margin-top: 24px;
+    text-align: center;
 }
