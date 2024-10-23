@@ -59,6 +59,12 @@ const navAdmin = () => {
                 </Link>
                 <Link className="nav-link" to="/usuarios" style={{ fontSize: '18px' }}>Usuarios</Link>
               </li>
+              <li className="nav-item d-flex flex-column align-items-center" style={{ marginRight: '30px' }}>
+                <Link to="/rutas">
+                  <img src={vehiculoslogo} alt="Rutas Logo" style={{ width: '40px', marginTop: '5px' }} />
+                </Link>
+                <Link className="nav-link" to="/rutasA" style={{ fontSize: '18px' }}>Rutas</Link>
+              </li>
             </ul>
             <ul className="navbar-nav">
               <li className="nav-item d-flex flex-column align-items-center">

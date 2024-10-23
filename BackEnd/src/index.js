@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 app.get('/vehiculos', router);
 app.get('/login', routerLogin);
-app.get('/rutas', routerRutas);S
+app.get('/rutasA', routerRutas);
 app.get('/usuarios',routerUsuarios);
 
 app.listen(process.env.PORT, ()=> { 

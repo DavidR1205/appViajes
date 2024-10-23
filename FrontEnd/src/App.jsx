@@ -12,7 +12,8 @@ function App() {
     "/programar",
     "/vehiculos",
     "/usuario",
-    "/informes"
+    "/informes",
+    "/rutasA"
   ]
   
   const loginRoutes = [

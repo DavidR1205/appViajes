@@ -1,4 +1,4 @@
-import { getAllRutas } from "../models/RutasModel";
+import { getAllRutas } from "../models/RutasModel.js";
 
 const getAllR = async (req, res) =>{
 

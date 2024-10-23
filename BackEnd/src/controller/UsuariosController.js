@@ -16,7 +16,7 @@ export {getCredenciales}
 const getAllU = async (req, res) =>{
 
     const usuarios = await getAllUsuarios();
-    res.json(usuario);
+    res.json(usuarios);
 }
 
 export {getAllU}

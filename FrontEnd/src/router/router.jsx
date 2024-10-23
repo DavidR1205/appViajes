@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import Home from "../pages/pagesHome/home"
 import Rutas from "../pages/pagesHome/rutas"
+import RutasAdmin from "../pages/pagesAdmin/rutasA"
 import Conductores from "../pages/pagesAdmin/conductores"
 import Informes from "../pages/pagesAdmin/informes"
 import Programar from "../pages/pagesAdmin/programar"
@@ -13,6 +14,7 @@ const router = () => {
       <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/rutas" element={<Rutas/>}/>
+          <Route path="/rutasA" element={<RutasAdmin/>}/>
           <Route path="/conductores" element={<Conductores/>}/>
           <Route path="/informes" element={<Informes/>}/>
           <Route path="/programar" element={<Programar/>}/>
