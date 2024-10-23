@@ -1,4 +1,4 @@
-import { getUsuarioByCredenciales } from "../models/UsuariosModel.js";
+import { getAllUsuarios, getUsuarioByCredenciales } from "../models/UsuariosModel.js";
 
 const getCredenciales = async(req, res) => {
     const { correo, contrasena } = req.query;
@@ -12,3 +12,11 @@ const getCredenciales = async(req, res) => {
 }
 
 export {getCredenciales}
+
+const getAllU = async (req, res) =>{
+
+    const usuarios = await getAllUsuarios();
+    res.json(usuario);
+}
+
+export {getAllU}

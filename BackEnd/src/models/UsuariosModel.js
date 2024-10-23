@@ -20,5 +20,15 @@ const getUsuarioByCredenciales = async(correo, contrasena) => {
         throw error;
     }
 }
-
 export { getUsuarioByCredenciales };
+
+const getAllUsuarios = async()=>{
+    try {
+        const usuarios = await sql.query('SELECT * FROM usuario')
+        return usuarios.recordset;
+    } catch (error) {
+        throw error;
+    }
+}
+
+export {getAllUsuarios};

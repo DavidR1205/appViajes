@@ -2,7 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import router from '../src/router/VehiculosRoute.js'
 import routerLogin from "../src/router/LoginRoute.js"
-import routerRutas from "../src/router/RutasRoute,.js"
+import routerRutas from "../src/router/RutasRoute.js"
+import routerUsuarios from './router/UsuariosRoute.js';
 import { sql, getConnetion } from './config/connetion.js';
 
 
@@ -12,7 +13,8 @@ app.use(cors());
 app.use(express.json());
 app.get('/vehiculos', router);
 app.get('/login', routerLogin);
-app.get('/rutas', routerRutas);
+app.get('/rutas', routerRutas);S
+app.get('/usuarios',routerUsuarios);
 
 app.listen(process.env.PORT, ()=> { 
     getConnetion();
