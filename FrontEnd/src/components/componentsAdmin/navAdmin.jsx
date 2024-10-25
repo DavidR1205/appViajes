@@ -6,6 +6,7 @@ import vehiculoslogo from '../../assets/image/adminImage/vehiculoslogo.png';
 import informeslogo from '../../assets/image/adminImage/informeslogo.png';
 import usuarioslogo from '../../assets/image/adminImage/usuarioslogo.png';
 import iniciarsesionlogo from '../../assets/image/adminImage/iniciarsesionlogo.png';
+import rutaslogo from '../../assets/image/adminImage/rutaslogo.png';
 import "../../assets/css/estilosAdmin/estilos.css"
 
 
@@ -61,7 +62,7 @@ const navAdmin = () => {
               </li>
               <li className="nav-item d-flex flex-column align-items-center" style={{ marginRight: '30px' }}>
                 <Link to="/rutas">
-                  <img src={vehiculoslogo} alt="Rutas Logo" style={{ width: '40px', marginTop: '5px' }} />
+                  <img src={rutaslogo} alt="Rutas Logo" style={{ width: '40px', marginTop: '5px' }} />
                 </Link>
                 <Link className="nav-link" to="/rutasA" style={{ fontSize: '18px' }}>Rutas</Link>
               </li>

@@ -4,6 +4,7 @@ import router from '../src/router/VehiculosRoute.js'
 import routerLogin from "../src/router/LoginRoute.js"
 import routerRutas from "../src/router/RutasRoute.js"
 import routerUsuarios from './router/UsuariosRoute.js';
+import routerConductores from './router/ConductoresRoute.js';
 import { sql, getConnetion } from './config/connetion.js';
 
 
@@ -15,6 +16,7 @@ app.get('/vehiculos', router);
 app.get('/login', routerLogin);
 app.get('/rutasA', routerRutas);
 app.get('/usuarios',routerUsuarios);
+app.get('/conductores',routerConductores);
 
 app.listen(process.env.PORT, ()=> { 
     getConnetion();
