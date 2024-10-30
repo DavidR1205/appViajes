@@ -42,7 +42,7 @@
 }
 
 .navbar {
-    padding: 60px 3px;
+    padding: 46px 3px;
 }
 
 .navbar-custom {
@@ -51,13 +51,14 @@
 
 
 .contCopy {
+    background-color: #00202B;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-width: 100vh;
+    min-height: 100%;
+    top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #00202B;
-    padding: 15px;
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: -8px ;
+    padding-top: 10px;
 }

@@ -20,10 +20,10 @@ const navAdmin = () => {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark navbar-custom" style={{ height: '60px' }}>
+      <nav className="navbar navbar-expand-lg navbar-dark navbar-custom" style={{ height: '30px' }}>
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-            <img src={Logo2} alt="Logo de Cootransporte" style={{ width: '160px', marginRight: '50px' }} />
+            <img src={Logo2} alt="Logo de Cootransporte" style={{ width: '110px', marginRight: '50px' }} />
           </Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -32,37 +32,37 @@ const navAdmin = () => {
             <ul className="navbar-nav me-auto">
               <li className="nav-item d-flex flex-column align-items-center" style={{ marginRight: '30px' }}>
                 <Link to="/programar">
-                  <img src={programarlogo} alt="Programar Logo" style={{ width: '40px', marginTop: '5px' }} />
+                  <img src={programarlogo} alt="Programar Logo" style={{ width: '30px', marginTop: '5px' }} />
                 </Link>
                 <Link className="nav-link" to="/programar" style={{ fontSize: '18px' }}>Programar</Link>
               </li>
               <li className="nav-item d-flex flex-column align-items-center" style={{ marginRight: '30px' }}>
                 <Link to="/conductores">
-                  <img src={conductoreslogo} alt="Conductores Logo" style={{ width: '40px', marginTop: '5px' }} />
+                  <img src={conductoreslogo} alt="Conductores Logo" style={{ width: '30px', marginTop: '5px' }} />
                 </Link>
                 <Link className="nav-link" to="/conductores" style={{ fontSize: '18px' }}>Conductores</Link>
               </li>
               <li className="nav-item d-flex flex-column align-items-center" style={{ marginRight: '30px' }}>
                 <Link to="/vehiculos">
-                  <img src={vehiculoslogo} alt="Vehículos Logo" style={{ width: '40px', marginTop: '5px' }} />
+                  <img src={vehiculoslogo} alt="Vehículos Logo" style={{ width: '30px', marginTop: '5px' }} />
                 </Link>
                 <Link className="nav-link" to="/vehiculos" style={{ fontSize: '18px' }}>Vehículos</Link>
               </li>
               <li className="nav-item d-flex flex-column align-items-center" style={{ marginRight: '30px' }}>
                 <Link to="/informes">
-                  <img src={informeslogo} alt="Informes Logo" style={{ width: '40px', marginTop: '5px' }} />
+                  <img src={informeslogo} alt="Informes Logo" style={{ width: '30px', marginTop: '5px' }} />
                 </Link>
                 <Link className="nav-link" to="/informes" style={{ fontSize: '18px' }}>Informes</Link>
               </li>
               <li className="nav-item d-flex flex-column align-items-center" style={{ marginRight: '30px' }}>
                 <Link to="/usuarios">
-                  <img src={usuarioslogo} alt="Usuarios Logo" style={{ width: '40px', marginTop: '5px' }} />
+                  <img src={usuarioslogo} alt="Usuarios Logo" style={{ width: '30px', marginTop: '5px' }} />
                 </Link>
                 <Link className="nav-link" to="/usuarios" style={{ fontSize: '18px' }}>Usuarios</Link>
               </li>
               <li className="nav-item d-flex flex-column align-items-center" style={{ marginRight: '30px' }}>
                 <Link to="/rutas">
-                  <img src={rutaslogo} alt="Rutas Logo" style={{ width: '40px', marginTop: '5px' }} />
+                  <img src={rutaslogo} alt="Rutas Logo" style={{ width: '30px', marginTop: '5px' }} />
                 </Link>
                 <Link className="nav-link" to="/rutasA" style={{ fontSize: '18px' }}>Rutas</Link>
               </li>
@@ -70,7 +70,7 @@ const navAdmin = () => {
             <ul className="navbar-nav">
               <li className="nav-item d-flex flex-column align-items-center">
                 <Link to="/iniciar-sesion">
-                  <img src={iniciarsesionlogo} alt="Iniciar Sesión Logo" style={{ width: '40px', marginTop: '5px' }} />
+                  <img src={iniciarsesionlogo} alt="Iniciar Sesión Logo" style={{ width: '30px', marginTop: '5px' }} />
                 </Link>
                 <Link className="nav-link small-link" to="/login" style={{ fontSize: '18px' }} onClick={handleLogout}>Cerrar Sesión</Link>
               </li>
