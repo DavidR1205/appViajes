@@ -44,7 +44,7 @@ const rutasA = () => {
           <tr key={c.id_ruta}>
             <td>{c.codigo_ruta}</td>
             <td>{c.nombre_ruta}</td>
-            <td>
+            <td className='accions-content'>
               <button className="btn btn-warning">Editar</button>
               <button className="btn btn-danger">Eliminar</button>
             </td>

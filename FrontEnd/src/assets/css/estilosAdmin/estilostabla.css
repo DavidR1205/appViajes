@@ -36,14 +36,13 @@
     padding: 12px;
     border: 1px solid #ddd;
     text-align: center;
+    vertical-align: middle;
 }
 
 .table thead {
     background-color: #00202B; 
     color: white;
 }
-
-
 
 
 .ver-mas-button {
@@ -64,4 +63,11 @@
 .table th.custom-header {
     background-color: #00202B; 
     color: white; 
+}
+
+.accions-content {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
 }

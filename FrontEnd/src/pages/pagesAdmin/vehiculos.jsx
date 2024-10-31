@@ -39,6 +39,10 @@ const vehiculos = () => {
             <th className="custom-header">Marca</th>
             <th className="custom-header">Modelo</th>
             <th className="custom-header">Tipo</th>
+            <th className="custom-header">Soat</th>
+            <th className="custom-header">Revision Tecnicomecanica</th>
+            <th className="custom-header">Tarjeta Operacion</th>
+            <th className="custom-header">Aseguradora</th>
             <th className="custom-header">Acciones</th>
           </tr>
         </thead>
@@ -50,7 +54,11 @@ const vehiculos = () => {
               <td>{c.marca}</td>
               <td>{c.modelo}</td>
               <td>{c.tipo_vehiculo}</td>
-              <td>
+              <td>{new Date(c.fecha_soat).toLocaleDateString()}</td>
+              <td>{new Date(c.fecha_tecno).toLocaleDateString()}</td>
+              <td>{new Date(c.fecha_operacion).toLocaleDateString()}</td>
+              <td>{c.aseguradora}</td>
+              <td className='accions-content'>
                 <button className="btn btn-warning">Editar</button>
                 <button className="btn btn-danger">Eliminar</button>
               </td>
