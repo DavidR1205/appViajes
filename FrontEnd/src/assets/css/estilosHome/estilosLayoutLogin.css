@@ -1,0 +1,11 @@
+.pageLogin {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.contentLogin {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
