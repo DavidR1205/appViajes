@@ -1,6 +1,10 @@
+import { Link } from "react-router-dom";
 import useAuth from "../../hooks/UseAuth.js"
 import { getAllVehiculos } from "../../services/VehiculosServices.js"
-import { useEffect, useState } from "react"
+import { useEffect, useState} from "react"
+import Swal from 'sweetalert2'
+import axios from "axios";
+
 
 const vehiculos = () => {
 
@@ -23,11 +27,35 @@ const vehiculos = () => {
       setError(erro)
     }
   }
+
+  const handleDelete = (id_vehiculo) => {
+    Swal.fire({
+      title: 'Esta seguro que desea eliminarlo?',
+      text: 'Una vez eliminado no podrá recuperarlo',
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Eliminar',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios.delete(`http://localhost:8082/vehiculos/${id_vehiculo}`)
+        .then(() => setVehiculos(vehiculos.filter(c => c.id_vehiculo !== id_vehiculo)))
+        .catch(error => console.log(error));
+        Swal.fire('Eliminado', 'El vehiculo ha sido eliminado con éxito', 'success');
+        fetchVehiculos();
+      }
+    });
+  }
+
+
   return (
     <div className="tabla-container">
 
       <div className="add-button-container">
+        <Link to="/crear_vehiculos">
         <button className="btn btn-success">Agregar</button>
+        </Link>
       </div>
 
 
@@ -60,7 +88,7 @@ const vehiculos = () => {
               <td>{c.aseguradora}</td>
               <td className='accions-content'>
                 <button className="btn btn-warning">Editar</button>
-                <button className="btn btn-danger">Eliminar</button>
+                <button onClick={()=> handleDelete(c.id_vehiculo)} className="btn btn-danger">Eliminar</button>
               </td>
             </tr>
           )}

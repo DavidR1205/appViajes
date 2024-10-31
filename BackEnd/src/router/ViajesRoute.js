@@ -3,6 +3,6 @@ import express from 'express'
 
 const router =  express.Router();
 
-router.get('/programar', getAllP);
+router.get('/', getAllP);
 
 export default router;

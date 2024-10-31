@@ -12,15 +12,12 @@ const stringConnetion={
     },
 };
 
-const getConnetion=async()=>{
-    try {
-        await sql.connect(stringConnetion);
-        console.log('Conectado con Exito')
-    } catch (error) {
-        console.log('error',error);
-        process.exit(1);
-    }
+const getConnetion = new sql.ConnectionPool(stringConnetion)
+.connect()
+.then(pool =>{
+    console.log('Conectados')
+    return pool
+})
+.catch(error => console.log('Error de conexión a la BD', error))
 
-}
-
-export{sql,getConnetion}
+export{sql, getConnetion}

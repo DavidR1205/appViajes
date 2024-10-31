@@ -22,9 +22,9 @@ const navAdmin = () => {
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark navbar-custom" style={{ height: '30px' }}>
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
+          <div className="navbar-brand">
             <img src={Logo2} alt="Logo de Cootransporte" style={{ width: '110px', marginRight: '50px' }} />
-          </Link>
+          </div>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>

@@ -8,6 +8,7 @@ import Programar from "../pages/pagesAdmin/programar"
 import Usuarios from "../pages/pagesAdmin/usuarios"
 import Vehiculos from "../pages/pagesAdmin/vehiculos"
 import Login from "../pages/pagesLogin/login"
+import CrearVehiculos from "../pages/pagesAdmin/creates/crearVehiculos"
 
 const router = () => {
     return (
@@ -20,6 +21,7 @@ const router = () => {
           <Route path="/programar" element={<Programar/>}/>
           <Route path="/usuarios" element={<Usuarios/>}/>
           <Route path="/vehiculos" element={<Vehiculos/>}/>
+          <Route path="/crear_vehiculos" element={<CrearVehiculos/>}/>
           <Route path="/login" element={<Login/>}/>
       </Routes>
     )

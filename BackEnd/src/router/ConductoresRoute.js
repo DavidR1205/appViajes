@@ -3,6 +3,6 @@ import express from 'express';
 
 const router = express.Router();
 
-router.get('/conductores', getAllC);
+router.get('/', getAllC);
 
 export default router;

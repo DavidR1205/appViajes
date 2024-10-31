@@ -3,6 +3,6 @@ import express from 'express';
 
 const router = express.Router();
 
-router.get('/rutasA', getAllR);
+router.get('/', getAllR);
 
 export default router;

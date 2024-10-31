@@ -36,6 +36,7 @@ const viajes = () => {
           <th className="custom-header">Vehiculo</th>
           <th className="custom-header">Conductor</th>
           <th className="custom-header">Ruta</th>
+          <th className="custom-header">Fecha</th>
           <th className="custom-header">Hora Inicio</th>
           <th className="custom-header">Hora Fin</th>
           <th className="custom-header">Duracion</th>
@@ -49,6 +50,7 @@ const viajes = () => {
             <td>{c.numero_interno}</td>
             <td>{`${c.primer_nombre} ${c.segundo_nombre} ${c.primer_apellido} ${c.segundo_apellido}`}</td>
             <td>{`${c.codigo_ruta} - ${c.nombre_ruta}`}</td>
+            <td>{new Date(c.fecha).toLocaleDateString()}</td>
             <td>{new Date(c.hora_inicio).toLocaleTimeString()}</td>
             <td>{new Date(c.hora_fin).toLocaleTimeString()}</td>
             <td>{c.duracion.split('T')[1].substring(0, 8)}</td>
