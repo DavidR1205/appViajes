@@ -22,9 +22,9 @@ const navAdmin = () => {
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark navbar-custom" style={{ height: '30px' }}>
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
+          <div className="navbar-brand">
             <img src={Logo2} alt="Logo de Cootransporte" style={{ width: '110px', marginRight: '50px' }} />
-          </Link>
+          </div>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -34,7 +34,7 @@ const navAdmin = () => {
                 <Link to="/programar">
                   <img src={programarlogo} alt="Programar Logo" style={{ width: '30px', marginTop: '5px' }} />
                 </Link>
-                <Link className="nav-link" to="/programar" style={{ fontSize: '18px' }}>Programar</Link>
+                <Link className="nav-link" to="/programar" style={{ fontSize: '18px' }}>Despachos</Link>
               </li>
               <li className="nav-item d-flex flex-column align-items-center" style={{ marginRight: '30px' }}>
                 <Link to="/conductores">
@@ -49,12 +49,6 @@ const navAdmin = () => {
                 <Link className="nav-link" to="/vehiculos" style={{ fontSize: '18px' }}>Vehículos</Link>
               </li>
               <li className="nav-item d-flex flex-column align-items-center" style={{ marginRight: '30px' }}>
-                <Link to="/informes">
-                  <img src={informeslogo} alt="Informes Logo" style={{ width: '30px', marginTop: '5px' }} />
-                </Link>
-                <Link className="nav-link" to="/informes" style={{ fontSize: '18px' }}>Informes</Link>
-              </li>
-              <li className="nav-item d-flex flex-column align-items-center" style={{ marginRight: '30px' }}>
                 <Link to="/usuarios">
                   <img src={usuarioslogo} alt="Usuarios Logo" style={{ width: '30px', marginTop: '5px' }} />
                 </Link>
@@ -65,6 +59,12 @@ const navAdmin = () => {
                   <img src={rutaslogo} alt="Rutas Logo" style={{ width: '30px', marginTop: '5px' }} />
                 </Link>
                 <Link className="nav-link" to="/rutasA" style={{ fontSize: '18px' }}>Rutas</Link>
+              </li>
+              <li className="nav-item d-flex flex-column align-items-center" style={{ marginRight: '30px' }}>
+                <Link to="/informes">
+                  <img src={informeslogo} alt="Informes Logo" style={{ width: '30px', marginTop: '5px' }} />
+                </Link>
+                <Link className="nav-link" to="/informes" style={{ fontSize: '18px' }}>Informes</Link>
               </li>
             </ul>
             <ul className="navbar-nav">

@@ -13,7 +13,8 @@ function App() {
     "/vehiculos",
     "/usuario",
     "/informes",
-    "/rutasA"
+    "/rutasA",
+    "/crear_vehiculos"
   ]
   
   const loginRoutes = [

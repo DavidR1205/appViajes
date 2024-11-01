@@ -5,20 +5,22 @@ import routerLogin from "../src/router/LoginRoute.js"
 import routerRutas from "../src/router/RutasRoute.js"
 import routerUsuarios from './router/UsuariosRoute.js';
 import routerConductores from './router/ConductoresRoute.js';
-import { sql, getConnetion } from './config/connetion.js';
+import routerViajes from './router/ViajesRoute.js'
 
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.get('/vehiculos', router);
-app.get('/login', routerLogin);
-app.get('/rutasA', routerRutas);
-app.get('/usuarios',routerUsuarios);
-app.get('/conductores',routerConductores);
+
+app.use('/vehiculos', router);
+app.use('/login', routerLogin);
+app.use('/rutasA', routerRutas);
+app.use('/usuarios',routerUsuarios);
+app.use('/conductores',routerConductores);
+app.use('/programar', routerViajes);
+
 
 app.listen(process.env.PORT, ()=> { 
-    getConnetion();
     console.log(`Conectado en el puerto: ${process.env.PORT}`)
 })

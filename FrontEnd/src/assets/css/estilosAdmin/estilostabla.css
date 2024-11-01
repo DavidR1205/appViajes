@@ -10,20 +10,6 @@
     text-align: right;
     margin-bottom: 10px;
 }
-.add-button {
-    background-color:#00202B ; 
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;}
-
-.add-button:hover {
-    background-color: #026592; 
-}
-
 
 .table {
     width: 100%;
@@ -36,6 +22,7 @@
     padding: 12px;
     border: 1px solid #ddd;
     text-align: center;
+    vertical-align: middle;
 }
 
 .table thead {
@@ -43,25 +30,15 @@
     color: white;
 }
 
-
-
-
-.ver-mas-button {
-    background-color: #00202B; 
-    color: white;
-    border: none;
-    padding: 5px 15px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.ver-mas-button:hover {
-    background-color: #026592; 
-}
-
-
 .table th.custom-header {
     background-color: #00202B; 
     color: white; 
+}
+
+.accions-content {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    min-height: 12vh;
 }

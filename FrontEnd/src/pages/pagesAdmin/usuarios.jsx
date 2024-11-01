@@ -46,13 +46,13 @@ const usuarios = () => {
       <tbody>
         {usuarios.map((c) =>
           <tr key={c.id_usuario}>
-            <td>{c.primer_nombre}</td>
-            <td>{c.segundo_nombre}</td>
-            <td>{c.primer_apellido}</td>
-            <td>{c.segundo_apellido}</td>
+            <td>{c.primer_nombre_user}</td>
+            <td>{c.segundo_nombre_user}</td>
+            <td>{c.primer_apellido_user}</td>
+            <td>{c.segundo_apellido_user}</td>
             <td>{c.correo}</td>
-            <td>{c.estado}</td>
-            <td>
+            <td>{c.estado_user}</td>
+            <td className='accions-content'>
               <button className="btn btn-warning">Editar</button>
               <button className="btn btn-danger">Eliminar</button>
             </td>

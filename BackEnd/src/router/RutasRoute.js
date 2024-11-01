@@ -3,8 +3,12 @@ import express from 'express';
 
 const router = express.Router();
 
+
 router.get('/rutasA', getAllR);
 router.post('/rutasA', addRuta);
 router.delete('/rutasA/:id_ruta', DeleteRutaA);
+
+router.get('/', getAllR);
+
 
 export default router;

@@ -1,13 +1,18 @@
 import FooterLogin from "../components/componentsLogin/footerLogin"
+import "../assets/css/estilosHome/estilosLayoutLogin.css"
 
-const layoutLogin = ({children}) => {
+const layoutLogin = ({ children }) => {
   return (
     <>
-      <div>
-        {children}
+      <div className="pageLogin">
+        <div className="contentLogin">
+          {children}
+        </div>
+        <div className="contentFooter">
+          <FooterLogin />
+        </div>
       </div>
-    <FooterLogin />
-  </>
+    </>
   )
 }
 
