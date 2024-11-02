@@ -4,7 +4,7 @@ const getAllR = async (req, res) =>{
 
     try {
 
-        const rutas = await getAllR()
+        const rutas = await getAllRutas()
         res.json(rutas)
         
     } catch (error) {

@@ -1,22 +1,26 @@
 import { getAllUsuarios, getUsuarioByCredenciales } from "../models/UsuariosModel.js";
 
-const getCredenciales = async(req, res) => {
+const getCredenciales = async (req, res) => {
     const { correo, contrasena } = req.query;
-    
+
     try {
-        const credenciales =  await getUsuarioByCredenciales(correo, contrasena);
+        const credenciales = await getUsuarioByCredenciales(correo, contrasena);
         res.json(credenciales);
     } catch (error) {
-        res.status(500).json({ message: "Error en el Servidor"});
+        res.status(500).json({ message: "Error en el Servidor" });
     }
 }
 
-export {getCredenciales}
+export { getCredenciales }
 
-const getAllU = async (req, res) =>{
+const getAllU = async (req, res) => {
+    try {
+        const usuarios = await getAllUsuarios();
+        res.json(usuarios);
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
 
-    const usuarios = await getAllUsuarios();
-    res.json(usuarios);
 }
 
-export {getAllU}
+export { getAllU }
