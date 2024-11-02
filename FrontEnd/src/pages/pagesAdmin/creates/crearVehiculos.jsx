@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 const crearVehiculos = () => {
 
     const navigate = useNavigate();
-    const[vehiculos, setVehiculos] = useState({id_vehiculo: '', placa: '', numero_interno: '', marca: '', modelo: '', fecha_soat: '', fecha_tecno: '', fecha_operacion: '', 
+    const [vehiculos, setVehiculos] = useState({id_vehiculo: '', placa: '', numero_interno: '', marca: '', modelo: '', fecha_soat: '', fecha_tecno: '', fecha_operacion: '', 
                                                 aseguradora: '', color: '', capacidad: '', tipo_vehiculo: '', chasis: '', nombre_propietario: '', numero_propietario: ''})
 
     

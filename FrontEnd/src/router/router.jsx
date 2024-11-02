@@ -9,6 +9,7 @@ import Usuarios from "../pages/pagesAdmin/usuarios"
 import Vehiculos from "../pages/pagesAdmin/vehiculos"
 import Login from "../pages/pagesLogin/login"
 import CrearVehiculos from "../pages/pagesAdmin/creates/crearVehiculos"
+import CrearRutas from "../pages/pagesAdmin/creates/crearRutasA"
 
 const router = () => {
     return (
@@ -22,6 +23,7 @@ const router = () => {
           <Route path="/usuarios" element={<Usuarios/>}/>
           <Route path="/vehiculos" element={<Vehiculos/>}/>
           <Route path="/crear_vehiculos" element={<CrearVehiculos/>}/>
+          <Route path="/crear_rutas" element={<CrearRutas/>}/>
           <Route path="/login" element={<Login/>}/>
       </Routes>
     )
