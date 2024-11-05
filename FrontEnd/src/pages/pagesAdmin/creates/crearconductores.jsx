@@ -4,73 +4,84 @@ import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 
 const CrearConductores = () => {
-    const navigate = useNavigate();
-    const [conductor, setConductor] = useState({
-        id_empleado: '',
-        primer_nombre: '',
-        primer_apellido: '',
-        nivel_educativo: '',
-        cargo: '',
-        salario: ''
-    });
+  const navigate = useNavigate();
+  const [conductores, setConductores] = useState({
+    id_empleado: '',
+    nombre: '',
+    apellido: '',
+    nivel_educativo: '',
+    cargo: '',
+    salario: '',
+    celular: '',
+    direccion: ''
+  });
 
-    const handleChanges = (e) => {
-        setConductor({ ...conductor, [e.target.name]: e.target.value });
-    };
+  const handleChanges = (e) => {
+    setConductores({ ...conductores, [e.target.name]: e.target.value });
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        axios.post('http://localhost:8082/conductores/', conductor)
-            .then(response => {
-                Swal.fire('Exitoso', 'Conductor ingresado con éxito', 'success');
-                navigate('/conductores'); 
-            })
-            .catch(error => {
-                console.log(error);
-                Swal.fire('Error', 'Ocurrió un error al ingresar el conductor', 'error');
-            });
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios.post('http://localhost:8082/conductores/', conductores)
+      .then(response => {
+        Swal.fire('Exitoso', 'Conductor Ingresado con Éxito', 'success');
+      })
+      .then(() => {
+        navigate('/conductores');
+      })
+      .catch(error => console.log(error));
+  };
 
-    return (
-        <div className='form-crearConductor'>
-            <div className='container-formConductor'>
-                <form onSubmit={handleSubmit}>
-                    <div className='title-formConductor'>
-                        <h3>Ingresar Conductor</h3>
-                    </div>
-                    <div className='elementFormConductor'>
-                        <div className='camp-input-conductor'>
-                            <label htmlFor="id_empleado">Id Empleado: </label>
-                            <input type="number" onChange={handleChanges} name='id_empleado' className='input-formConductor' />
-                        </div>
-                        <div className='camp-input-conductor'>
-                            <label htmlFor="primer_nombre">Primer Nombre: </label>
-                            <input type="text" onChange={handleChanges} name='primer_nombre' className='input-formConductor' />
-                        </div>
-                        <div className='camp-input-conductor'>
-                            <label htmlFor="primer_apellido">Primer Apellido: </label>
-                            <input type="text" onChange={handleChanges} name='primer_apellido' className='input-formConductor' />
-                        </div>
-                        <div className='camp-input-conductor'>
-                            <label htmlFor="nivel_educativo">Nivel Educativo: </label>
-                            <input type="text" onChange={handleChanges} name='nivel_educativo' className='input-formConductor' />
-                        </div>
-                        <div className='camp-input-conductor'>
-                            <label htmlFor="cargo">Cargo: </label>
-                            <input type="text" onChange={handleChanges} name='cargo' className='input-formConductor' />
-                        </div>
-                        <div className='camp-input-conductor'>
-                            <label htmlFor="salario">Salario: </label>
-                            <input type="number" onChange={handleChanges} name='salario' className='input-formConductor' />
-                        </div>
-                    </div>
-                    <div className='button-formConductor'>
-                        <button type='submit' className='btn btn-success'>Agregar</button>
-                    </div>
-                </form>
+  return (
+    <div className='form-crearConductores'>
+      <div className='container-formConductores'>
+        <form onSubmit={handleSubmit}>
+          <div className='title-formConductores'>
+            <h3>Ingresar Conductor</h3>
+          </div>
+          <div className='elementFormConductores'>
+            <div className='section-FormConductores'>
+              <div className='camp-input'>
+                <label htmlFor="id_empleado">Id Empleado: </label>
+                <input type="number" onChange={handleChanges} name='id_empleado' className='input-formConductores' />
+              </div>
+              <div className='camp-input'>
+                <label htmlFor="nombre">Nombre: </label>
+                <input type="text" onChange={handleChanges} name='nombre' className='input-formConductores' />
+              </div>
+              <div className='camp-input'>
+                <label htmlFor="apellido">Apellido: </label>
+                <input type="text" onChange={handleChanges} name='apellido' className='input-formConductores' />
+              </div>
+              <div className='camp-input'>
+                <label htmlFor="nivel_educativo">Nivel Educativo: </label>
+                <input type="text" onChange={handleChanges} name='nivel_educativo' className='input-formConductores' />
+              </div>
+              <div className='camp-input'>
+                <label htmlFor="cargo">Cargo: </label>
+                <input type="text" onChange={handleChanges} name='cargo' className='input-formConductores' />
+              </div>
+              <div className='camp-input'>
+                <label htmlFor="salario">Salario: </label>
+                <input type="number" onChange={handleChanges} name='salario' className='input-formConductores' />
+              </div>
+              <div className='camp-input'>
+                <label htmlFor="celular">Celular: </label>
+                <input type="number" onChange={handleChanges} name='celular' className='input-formConductores' />
+              </div>
+              <div className='camp-input'>
+                <label htmlFor="direccion">Dirección: </label>
+                <input type="text" onChange={handleChanges} name='direccion' className='input-formConductores' />
+              </div>
             </div>
-        </div>
-    );
-};
+          </div>
+          <div className='button-formConductores'>
+            <button type='submit' className='btn btn-success'>Agregar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
 
 export default CrearConductores;
