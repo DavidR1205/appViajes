@@ -38,4 +38,19 @@ const DeleteRuta = async (ruta) =>{
     }
 
 }
-export {getAllRutas, DeleteRuta,createRuta}
+
+const updateRuta = async (ruta) => {
+    
+    const {id_ruta, codigo_ruta, nombre_ruta} = ruta;
+    const con = await getConnetion();
+    try {
+        await con.request();
+        input('id_ruta', sql.BigInt, id_ruta)
+        input('codigo_ruta', sql.VarChar, codigo_ruta)
+        input('nombre_ruta', sql.VarChar, nombre_ruta)
+        query('UPDATE ruta SET codigo_ruta = @codito_ruta, nombre_ruta = @nombre_ruta WHERE id_ruta = @id_ruta');
+    } catch (error) {
+            console.error(error);
+    }
+}
+export {getAllRutas, DeleteRuta,createRuta,updateRuta}

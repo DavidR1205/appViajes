@@ -1,4 +1,4 @@
-import { getAllRutas, createRuta,DeleteRuta} from "../models/RutasModel.js";
+import { getAllRutas, createRuta,DeleteRuta, updateRuta,getRutaById} from "../models/RutasModel.js";
 
 const getAllR = async (req, res) =>{
 
@@ -35,4 +35,31 @@ const DeleteRutaA = async (req, res) => {
     }
 }
 
-export {getAllR, addRuta, DeleteRutaA}
+const actualizarRuta = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const ruta  = req.body;
+        ruta.id_ruta = id;
+        await updateRuta(ruta);
+        res.send('Ruta actualizada con exito');
+    } catch (error) {
+        res.status(500).send(error.message);
+        
+    }
+}
+
+const obtenerRuta = async (req,res) => {
+    try {
+        const id = req.params.id;
+        const ruta = await getRutaById(id);
+        if (ruta){
+            res.json(ruta);
+        }else{
+            res.status(404).json({ message: 'Ruta no encontrada'});
+        }
+    } catch (error) {
+        res.status(500).send(error.message)
+    }
+}
+
+export {getAllR, addRuta, DeleteRutaA,actualizarRuta,obtenerRuta}
