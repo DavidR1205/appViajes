@@ -57,10 +57,12 @@ const Conductores = () => {
       <table className="table">
         <thead>
           <tr>
-            <th className="custom-header">Id Empleado</th>
-            <th className="custom-header">Nombre</th>
-            <th className="custom-header">Apellido</th>
-            <th className="custom-header">Nivel Educativo</th>
+            <th className="custom-header">Primer Nombre</th>
+            <th className="custom-header">Segundo Nombre</th>
+            <th className="custom-header">Primer Apellido</th>
+            <th className="custom-header">Segundo Apellido</th>
+            <th className="custom-header">Numero Documento</th>
+            <th className="custom-header">Correo</th>
             <th className="custom-header">Cargo</th>
             <th className="custom-header">Salario</th>
             <th className="custom-header">Acciones</th>
@@ -69,10 +71,12 @@ const Conductores = () => {
         <tbody>
           {conductores.map((c) => (
             <tr key={c.id_empleado}>
-              <td>{c.id_empleado}</td>
-              <td>{c.nombre}</td>
-              <td>{c.apellido}</td>
-              <td>{c.nivel_educativo}</td>
+              <td>{c.primer_nombre}</td>
+              <td>{c.segundo_nombre}</td>
+              <td>{c.primer_apellido}</td>
+              <td>{c.segundo_apellido}</td>
+              <td>{c.numero_documento}</td>
+              <td>{c.correo_electronico}</td>
               <td>{c.cargo}</td>
               <td>{c.salario}</td>
               <td className='accions-content'>

@@ -1,4 +1,4 @@
-import { getAllViajes } from "../models/ViajesModel.js";
+import { getAllViajes, createViaje, deleteViaje } from "../models/ViajesModel.js";
 
 const getAllP = async (req, res) => {
     
@@ -12,4 +12,26 @@ const getAllP = async (req, res) => {
     
 }
 
-export {getAllP}
+const addViaje = async (req, res) => {
+
+    try {
+        
+        await createViaje(req.body)
+        res.status(201).json({message: 'Datos Insertados Correctamente'})
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
+
+}
+
+const deleteViajeD = async (req, res) => {
+    
+    try {
+        await deleteViaje(req.params)
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
+
+}
+
+export {getAllP, addViaje, deleteViajeD}

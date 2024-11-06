@@ -10,6 +10,9 @@ import Vehiculos from "../pages/pagesAdmin/vehiculos"
 import Login from "../pages/pagesLogin/login"
 import CrearVehiculos from "../pages/pagesAdmin/creates/crearVehiculos"
 import CrearRutas from "../pages/pagesAdmin/creates/crearRutasA"
+import CrearUsuario from "../pages/pagesAdmin/creates/crearUsuario"
+import CrearConductores from "../pages/pagesAdmin/creates/crearconductores"
+import CrearViajes from "../pages/pagesAdmin/creates/crearViaje"
 
 const router = () => {
     return (
@@ -24,6 +27,9 @@ const router = () => {
           <Route path="/vehiculos" element={<Vehiculos/>}/>
           <Route path="/crear_vehiculos" element={<CrearVehiculos/>}/>
           <Route path="/crear_rutas" element={<CrearRutas/>}/>
+          <Route path="/crear_usuario" element={<CrearUsuario/>}/>
+          <Route path="/crear_conductores" element={<CrearConductores/>}/>
+          <Route path="/crear_viaje" element={<CrearViajes/>}/>
           <Route path="/login" element={<Login/>}/>
       </Routes>
     )

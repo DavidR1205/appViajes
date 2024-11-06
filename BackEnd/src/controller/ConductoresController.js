@@ -1,4 +1,3 @@
-
 import { getAllConductores, CreateConductores, DeleteConductores } from "../models/ConductoresModel.js";
 
 const getAllC = async (req, res) => {
@@ -20,8 +19,11 @@ const addConductor = async (req, res) => {
 };
 
 const deleteConductor = async (req, res) => {
+
+    const { id_empleado } = req.params
+
     try {
-        await DeleteConductores(req.params.id); 
+        await DeleteConductores(id_empleado); 
         res.status(200).json({ message: 'Conductor eliminado correctamente' });
     } catch (error) {
         res.status(500).json({ message: error.message });

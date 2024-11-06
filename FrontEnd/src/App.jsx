@@ -15,7 +15,10 @@ function App() {
     "/informes",
     "/rutasA",
     "/crear_vehiculos",
-    "/crear_rutas"
+    "/crear_rutas",
+    "/crear_usuario",
+    "/crear_conductores",
+    "/crear_viaje"
   ]
   
   const loginRoutes = [
