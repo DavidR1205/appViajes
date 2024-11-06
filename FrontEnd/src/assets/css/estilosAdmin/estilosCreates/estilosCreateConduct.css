@@ -1,0 +1,55 @@
+.form-crearConductores {
+    display: flex;
+    justify-content: center;
+}
+
+.container-formConductores {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.title-formConductores {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0px;
+}
+
+.elementFormConductores {
+    display: flex;
+    gap: 45px;
+    justify-content: center;
+    padding: 0px 30px;
+}
+
+.section-FormConductores {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+}
+
+.camp-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 45vh;
+    color: black;
+}
+
+.input-formConductor {
+    width: 100%;
+    border-radius: 10px;
+    padding: 3px;
+    border: 1px solid black;
+}
+
+.button-formConductores {
+    margin: 25px;
+    text-align: center;
+    width: 100vh;
+    background-color: aqua;
+}

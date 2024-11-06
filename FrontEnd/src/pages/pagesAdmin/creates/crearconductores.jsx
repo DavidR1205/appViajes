@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
+import "../../../assets/css/estilosAdmin/estilosCreates/estilosCreateConduct.css"
 
 const CrearConductores = () => {
 
@@ -103,12 +104,12 @@ const CrearConductores = () => {
                 <label htmlFor="direccion">Direccion: </label>
                 <input type="text" onChange={handleChanges} name="direccion" className='input-formConductor' />
               </div>
+            </div>
+            <div className='section-FormConductores'>
               <div className='camp-input'>
                 <label htmlFor="tipo_vivienda">Tipo Vivienda: </label>
                 <input type="text" onChange={handleChanges} name="tipo_vivienda" className='input-formConductor' />
               </div>
-            </div>
-            <div className='section-FormConductores'>
               <div className='camp-input'>
                 <label htmlFor="celular">Celular: </label>
                 <input type="number" onChange={handleChanges} name="celular" className='input-formConductor' />
@@ -197,7 +198,7 @@ const CrearConductores = () => {
               </div>
             </div>
           </div>
-          <div className='button-formConductores'>
+          <div className='button-formConductores d-grid gap-2'>
             <button type='submit' className='btn btn-success'>Agregar</button>
           </div>
         </form>
