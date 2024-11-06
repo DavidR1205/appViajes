@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom";
 import moment from 'moment'
 import Swal from 'sweetalert2'
+import axios from "axios";
 
 const viajes = () => {
   useAuth();
@@ -61,6 +62,26 @@ const viajes = () => {
     }
   };
 
+  const handleDelete = (id_viaje) => {
+    Swal.fire({
+      title: 'Esta seguro que desea eliminarlo?',
+      text: 'Una vez eliminado no podrá recuperarlo',
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Eliminar',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios.delete(`http://localhost:8082/programar/${id_viaje}`)
+        .then(() => setViaje(viaje.filter(c => c.id_viaje !== id_viaje)))
+        .catch(error => console.log(error));
+        Swal.fire('Eliminado', 'El viaje ha sido eliminado con éxito', 'success');
+        fetchViajes();
+      }
+    });
+  }
+
   return (
     <div className="tabla-container">
 
@@ -96,9 +117,9 @@ const viajes = () => {
               <td>{c.duracion ? moment(c.duracion).utc().format('HH:mm:ss') : '-'}</td>
               <td>{c.estado}</td>
               <td className='accions-content'>
-                <button className='btn btn-primary' onClick={() => handleFinalizar(c.id_viaje, c.hora_inicio.split('T')[1].substring(0, 8))}>Finalizar</button>
-                <button className="btn btn-warning">Novedad</button>
-                <button className="btn btn-danger">Eliminar</button>
+                <button className="btn btn-primary btn-sm" onClick={() => handleFinalizar(c.id_viaje, c.hora_inicio.split('T')[1].substring(0, 8))}>Finalizar</button>
+                <button className="btn btn-warning btn-sm">Novedad</button>
+                <button className="btn btn-danger btn-sm" onClick={()=> handleDelete(c.id_viaje)}>Eliminar</button>
               </td>
             </tr>
           )}
