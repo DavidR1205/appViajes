@@ -8,3 +8,15 @@ export const getAllViajes = async()=>{
     return respuesta.data
 
 }
+
+export const finalizarViaje = async (id_viaje, hora_fin, duracion) => {
+    try {
+        const respuesta = await axios.put(`http://localhost:8082/programar/${id_viaje}`, {
+            hora_fin,
+            duracion,
+        });
+        return respuesta.data;
+    } catch (error) {
+        throw error;
+    }
+}

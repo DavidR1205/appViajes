@@ -1,4 +1,4 @@
-import { getAllViajes, createViaje, deleteViaje } from "../models/ViajesModel.js";
+import { getAllViajes, createViaje, deleteViaje, finalizarViaje } from "../models/ViajesModel.js";
 
 const getAllP = async (req, res) => {
     
@@ -34,4 +34,19 @@ const deleteViajeD = async (req, res) => {
 
 }
 
-export {getAllP, addViaje, deleteViajeD}
+
+const finalizarViajeC = async (req, res) => {
+
+    const { id_viaje } = req.params;
+    const { hora_fin, duracion } = req.body;
+
+    try {
+        await finalizarViaje(id_viaje, hora_fin, duracion);
+        res.status(200).json({ message: 'Viaje finalizado correctamente' });
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+
+}
+
+export {getAllP, addViaje, deleteViajeD, finalizarViajeC}

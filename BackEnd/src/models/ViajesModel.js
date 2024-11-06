@@ -5,6 +5,7 @@ const getAllViajes = async () => {
     const con = await getConnetion
     const result = await con.request().query(
         `SELECT 
+        p.id_viaje,
         p.fecha, 
         p.hora_inicio, 
         p.hora_fin, 
@@ -62,4 +63,22 @@ const deleteViaje = async (viajes) => {
 
 }
 
-export { getAllViajes, createViaje, deleteViaje }
+const finalizarViaje = async (id_viaje, hora_fin, duracion) => {
+    
+    const con = await getConnetion;
+
+    try { 
+
+        await con.request()
+        .input('id_viaje', sql.BigInt, id_viaje)
+        .input('hora_fin', sql.VarChar, hora_fin)
+        .input('duracion', sql.VarChar, duracion)
+        .query('UPDATE viaje SET hora_fin = @hora_fin, duracion = @duracion, estado = \'Finalizado\' WHERE id_viaje = @id_viaje');
+
+    } catch (error) {
+        throw new Error("Error al finalizar el viaje: " + error.message);
+    }
+
+}
+
+export { getAllViajes, createViaje, deleteViaje, finalizarViaje }

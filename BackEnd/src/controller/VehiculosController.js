@@ -31,5 +31,4 @@ const deleteVehiculosD = async (req, res) => {
 
 }
 
-
 export {getAllV, addVehiculos, deleteVehiculosD}
