@@ -1,10 +1,10 @@
-import { getAllRutas, createRuta,DeleteRuta, updateRuta,getRutaById} from "../models/RutasModel.js";
+import { getAllRutas, createRuta,DeleteRuta} from "../models/RutasModel.js";
 
 const getAllR = async (req, res) =>{
 
     try {
 
-        const rutas = await getAllR()
+        const rutas = await getAllRutas()
         res.json(rutas)
         
     } catch (error) {
