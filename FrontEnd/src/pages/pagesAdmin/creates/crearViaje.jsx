@@ -8,7 +8,7 @@ const crearViaje = () => {
 
     const navigate = useNavigate();
     const [viajes, setViajes] = useState({
-        hora_inicio: '', hora_fin: '', duracion: '', estado: 'En Curso', id_vehiculo: '', id_ruta: '', id_empleado: '',
+        hora_inicio: '', hora_fin: '00:00:00', duracion: '00:00:00', estado: 'En Curso', id_vehiculo: '', id_ruta: '', id_empleado: '',
         id_usuario: '', fecha: ''
     })
     const [vehiculos, setVehiculos] = useState([])
