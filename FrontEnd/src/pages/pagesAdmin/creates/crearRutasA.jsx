@@ -3,6 +3,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom'
+import '../../../assets/css/estilosAdmin/estilosCreates/estilosCrearRutasA.css'
 
 const crearRutasA = () => {
 
