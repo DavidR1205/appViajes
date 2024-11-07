@@ -3,8 +3,10 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 import "../../../assets/css/estilosAdmin/estilosCreates/estilosCreateConduct.css"
+import useAuth from "../../../hooks/UseAuth.js"
 
 const CrearConductores = () => {
+  useAuth();
 
   const navigate = useNavigate();
   const [conductores, setConductores] = useState({

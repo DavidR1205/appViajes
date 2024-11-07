@@ -12,12 +12,11 @@ export {getAllVehiculos}
 
 const createVehiculos = async (vehiculos) => {
 
-    const {id_vehiculo, placa, numero_interno, marca, modelo, fecha_soat, fecha_tecno, 
+    const {placa, numero_interno, marca, modelo, fecha_soat, fecha_tecno, 
             fecha_operacion, aseguradora, color, capacidad, tipo_vehiculo, chasis, nombre_propietario, numero_propietario} = vehiculos
     
     const con = await getConnetion
     await con.request()
-    .input('id_vehiculo', sql.BigInt, id_vehiculo)
     .input('placa', sql.VarChar, placa)
     .input('numero_interno', sql.Int, numero_interno)
     .input('marca', sql.VarChar, marca)
@@ -32,7 +31,7 @@ const createVehiculos = async (vehiculos) => {
     .input('chasis', sql.VarChar, chasis)
     .input('nombre_propietario', sql.VarChar, nombre_propietario)
     .input('numero_propietario', sql.BigInt, numero_propietario)
-    .query('INSERT INTO vehiculos VALUES(@id_vehiculo, @placa, @numero_interno, @marca, @modelo, @fecha_soat, @fecha_tecno, @fecha_operacion, @aseguradora, @color, @capacidad, @tipo_vehiculo, @chasis, @nombre_propietario, @numero_propietario)')
+    .query('INSERT INTO vehiculos VALUES(@placa, @numero_interno, @marca, @modelo, @fecha_soat, @fecha_tecno, @fecha_operacion, @aseguradora, @color, @capacidad, @tipo_vehiculo, @chasis, @nombre_propietario, @numero_propietario)')
 }
 
 export {createVehiculos}

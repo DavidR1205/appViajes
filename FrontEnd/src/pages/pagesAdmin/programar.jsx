@@ -1,9 +1,10 @@
 import React from 'react';
 import "../../assets/css/estilosAdmin/estilostabla.css"
+import "../../assets/css/estilosAdmin/estiloProgramar.css"
 import useAuth from "../../hooks/UseAuth.js"
 import { getAllViajes, finalizarViaje } from '../../services/ViajesService.js';
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import moment from 'moment'
 import Swal from 'sweetalert2'
 import axios from "axios";
@@ -11,9 +12,26 @@ import axios from "axios";
 const viajes = () => {
   useAuth();
 
+  const navigate = useNavigate();
   const [viaje, setViaje] = useState([])
   const [error, setError] = useState('')
+  const [filteredViaje, setFilteredViaje] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
 
+  useEffect(() => {
+    if (searchQuery === '') {
+      setFilteredViaje(viaje);
+    } else {
+      const filtered = viaje.filter((n) =>
+        `${n.numero_interno} ${n.codigo_ruta} ${n.nombre_ruta} 
+          ${n.hora_inicio} ${n.hora_fin} ${n.duracion} ${n.estado} ${n.fecha}
+          ${n.primer_nombre} ${n.segundo_nombre} ${n.primer_apellido} ${n.segundo_apellido}`
+          .toLowerCase()
+          .includes(searchQuery.toLowerCase())
+      );
+      setFilteredViaje(filtered);
+    }
+  }, [searchQuery, viaje]);
 
   useEffect(() => {
     fetchViajes()
@@ -54,7 +72,7 @@ const viajes = () => {
       const responseF = await finalizarViaje(id_viaje, horaFin, duracion);
       Swal.fire('Finalizado', 'Viaje finalizado con éxito', 'success')
         .then(() => {
-          fetchViajes(); // Refrescar los viajes después de la notificación
+          fetchViajes();
         });
     } catch (error) {
       setError('Error al finalizar el viaje');
@@ -74,8 +92,8 @@ const viajes = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios.delete(`http://localhost:8082/programar/${id_viaje}`)
-        .then(() => setViaje(viaje.filter(c => c.id_viaje !== id_viaje)))
-        .catch(error => console.log(error));
+          .then(() => setViaje(viaje.filter(c => c.id_viaje !== id_viaje)))
+          .catch(error => console.log(error));
         Swal.fire('Eliminado', 'El viaje ha sido eliminado con éxito', 'success');
         fetchViajes();
       }
@@ -84,8 +102,15 @@ const viajes = () => {
 
   return (
     <div className="tabla-container">
+      <div className="add-button-container-programar">
+        <input
+          type="text"
+          placeholder="Buscar Viaje"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="search-input"
+        />
 
-      <div className="add-button-container">
         <Link to="/crear_viaje">
           <button className="btn btn-success">Agregar</button>
         </Link>
@@ -106,7 +131,7 @@ const viajes = () => {
           </tr>
         </thead>
         <tbody>
-          {viaje.map((c) =>
+          {filteredViaje.map((c) =>
             <tr key={c.id_viaje}>
               <td>{c.numero_interno}</td>
               <td>{`${c.primer_nombre} ${c.segundo_nombre} ${c.primer_apellido} ${c.segundo_apellido}`}</td>
@@ -118,8 +143,8 @@ const viajes = () => {
               <td>{c.estado}</td>
               <td className='accions-content'>
                 <button className="btn btn-primary btn-sm" onClick={() => handleFinalizar(c.id_viaje, c.hora_inicio.split('T')[1].substring(0, 8))}>Finalizar</button>
-                <button className="btn btn-warning btn-sm">Novedad</button>
-                <button className="btn btn-danger btn-sm" onClick={()=> handleDelete(c.id_viaje)}>Eliminar</button>
+                <button className="btn btn-warning btn-sm" onClick={() => navigate(`/novedades/crear_novedad/${c.id_viaje}`)}>Novedad</button>
+                <button className="btn btn-danger btn-sm" onClick={() => handleDelete(c.id_viaje)}>Eliminar</button>
               </td>
             </tr>
           )}

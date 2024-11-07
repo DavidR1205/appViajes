@@ -3,12 +3,14 @@ import { useState } from 'react'
 import axios from 'axios'
 import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom'
-import '../../../assets/css/estilosAdmin/estilosCreates/estilosCrearRutasA.css'
+import "../../../assets/css/estilosAdmin/estilosCreates/estilosCreateRuta.css"
+import useAuth from "../../../hooks/UseAuth.js"
 
 const crearRutasA = () => {
+    useAuth();
 
     const navigate = useNavigate();
-    const [ruta, setRuta] = useState({ id_ruta: '', codigo_ruta: '', nombre_ruta: '' })
+    const [ruta, setRuta] = useState({ codigo_ruta: '', nombre_ruta: '' })
 
     const handleChanges = (e) => {
         setRuta({ ...ruta, [e.target.name]: e.target.value })
@@ -34,10 +36,6 @@ const crearRutasA = () => {
                     </div>
                     <div className='elementFormRuta'>
                         <div className='camp-input-ruta'>
-                            <label htmlFor="id_ruta">Id Ruta: </label>
-                            <input type="number" onChange={handleChanges} name='id_ruta' className='input-formRuta'/>
-                        </div>
-                        <div className='camp-input-ruta'>
                             <label htmlFor="codigo_ruta">Codigo Ruta: </label>
                             <input type="text" onChange={handleChanges} name='codigo_ruta' className='input-formRuta'/>
                         </div>
@@ -46,7 +44,7 @@ const crearRutasA = () => {
                             <input type="text" onChange={handleChanges} name='nombre_ruta' className='input-formRuta'/>
                         </div>
                     </div>
-                    <div className='button-formRuta'>
+                    <div className='button-formRuta d-grid gap-2'>
                         <button type='submit' className='btn btn-success'>Agregar</button>
                     </div>
                 </form>

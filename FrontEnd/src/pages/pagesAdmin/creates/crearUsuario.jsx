@@ -3,8 +3,11 @@ import { useState } from 'react'
 import axios from 'axios'
 import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom'
+import "../../../assets/css/estilosAdmin/estilosCreates/estilosCreateUser.css"
+import useAuth from "../../../hooks/UseAuth.js"
 
 const crearUsuario = () => {
+    useAuth();
 
     const navigate = useNavigate();
     const [usuario, setUsuario] = useState({
@@ -41,7 +44,7 @@ const crearUsuario = () => {
                     <div className='title-formUsuarios'>
                         <h3>Ingresar Usuario</h3>
                     </div>
-                    <div className='elementFormVehiculos'>
+                    <div className='elementFormUsuarios'>
                         <div className="section-FormUsuarios">
                             <div className='camp-input'>
                                 <label htmlFor="primer_nombre_user">Primer Nombre: </label>
@@ -58,6 +61,17 @@ const crearUsuario = () => {
                             <div className='camp-input'>
                                 <label htmlFor="segundo_apellido_user">Segundo Apellido: </label>
                                 <input type="text" onChange={handleChanges} name="segundo_apellido_user" className='input-formUsuarios' />
+                            </div>
+                            <div className='camp-input'>
+                                <label htmlFor="id_rol">Rol: </label>
+                                <select name='id_rol' value={usuario.id_rol} onChange={handleChanges} className='input-formUsuarios'>
+                                    <option value=""></option>
+                                    {roles.map(rol => (
+                                        <option key={rol.id_rol} value={rol.id_rol}>
+                                            {rol.nombre_rol}
+                                        </option>
+                                    ))}
+                                </select>
                             </div>
                         </div>
                         <div className='section-FormUsuarios'>
@@ -77,20 +91,9 @@ const crearUsuario = () => {
                                 <label htmlFor="contrasena">Contraseña: </label>
                                 <input type="text" onChange={handleChanges} name="contrasena" className='input-formUsuarios' />
                             </div>
-                            <div className='camp-input'>
-                                <label htmlFor="id_rol">Rol: </label>
-                                <select name='id_rol' value={usuario.id_rol} onChange={handleChanges} className='input-formUsuarios'>
-                                    <option value=""></option>
-                                    {roles.map(rol => (
-                                        <option key={rol.id_rol} value={rol.id_rol}>
-                                            {rol.nombre_rol}
-                                        </option>
-                                    ))}
-                                </select>
-                            </div>
                         </div>
                     </div>
-                    <div className='button-formVehiculos'>
+                    <div className='button-formUsuarios d-grid gap-2'>
                         <button type='submit' className='btn btn-success'>Agregar</button>
                     </div>
                 </form>

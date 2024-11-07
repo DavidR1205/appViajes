@@ -16,13 +16,12 @@ const getAllRutas = async()=>{
 
 const createRuta = async (ruta)=>{
 
-    const {id_ruta, codigo_ruta, nombre_ruta} = ruta
+    const {codigo_ruta, nombre_ruta} = ruta
     const con = await getConnetion
     await con.request()
-    .input('id_ruta', sql.BigInt, id_ruta)
     .input('codigo_ruta', sql.VarChar, codigo_ruta)
     .input('nombre_ruta', sql.VarChar, nombre_ruta)
-    .query('INSERT INTO ruta(id_ruta, codigo_ruta, nombre_ruta) VALUES (@id_ruta, @codigo_ruta, @nombre_ruta) ')
+    .query('INSERT INTO ruta(codigo_ruta, nombre_ruta) VALUES (@codigo_ruta, @nombre_ruta) ')
 
 }
 
