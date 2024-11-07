@@ -4,8 +4,10 @@ import axios from 'axios'
 import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom'
 import "../../../assets/css/estilosAdmin/estilosCreates/estilosCreateRuta.css"
+import useAuth from "../../../hooks/UseAuth.js"
 
 const crearRutasA = () => {
+    useAuth();
 
     const navigate = useNavigate();
     const [ruta, setRuta] = useState({ codigo_ruta: '', nombre_ruta: '' })

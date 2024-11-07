@@ -4,8 +4,10 @@ import axios from 'axios'
 import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom'
 import "../../../assets/css/estilosAdmin/estilosCreates/estilosCreateViaje.css"
+import useAuth from "../../../hooks/UseAuth.js"
 
 const crearViaje = () => {
+    useAuth();
 
     const navigate = useNavigate();
     const [viajes, setViajes] = useState({

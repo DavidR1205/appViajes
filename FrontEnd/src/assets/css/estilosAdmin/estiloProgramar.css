@@ -1,0 +1,7 @@
+.add-button-container-programar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    margin-bottom: 10px;
+}

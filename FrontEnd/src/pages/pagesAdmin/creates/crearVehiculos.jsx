@@ -4,8 +4,10 @@ import axios from 'axios'
 import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom';
 import "../../../assets/css/estilosAdmin/estilosCreates/estilosCreateVeh.css"
+import useAuth from "../../../hooks/UseAuth.js"
 
 const crearVehiculos = () => {
+    useAuth();
 
     const navigate = useNavigate();
     const [vehiculos, setVehiculos] = useState({placa: '', numero_interno: '', marca: '', modelo: '', fecha_soat: '', fecha_tecno: '', fecha_operacion: '', 

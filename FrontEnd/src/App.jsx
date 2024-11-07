@@ -12,13 +12,14 @@ function App() {
     "/programar",
     "/vehiculos",
     "/usuario",
-    "/informes",
+    "/novedades",
     "/rutasA",
     "/crear_vehiculos",
     "/crear_rutas",
     "/crear_usuario",
     "/crear_conductores",
-    "/crear_viaje"
+    "/crear_viaje",
+    "novedades/crear_novedad"
   ]
   
   const loginRoutes = [

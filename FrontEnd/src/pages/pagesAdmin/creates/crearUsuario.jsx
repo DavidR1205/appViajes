@@ -4,8 +4,10 @@ import axios from 'axios'
 import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom'
 import "../../../assets/css/estilosAdmin/estilosCreates/estilosCreateUser.css"
+import useAuth from "../../../hooks/UseAuth.js"
 
 const crearUsuario = () => {
+    useAuth();
 
     const navigate = useNavigate();
     const [usuario, setUsuario] = useState({

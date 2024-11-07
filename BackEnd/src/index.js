@@ -6,6 +6,7 @@ import routerRutas from "../src/router/RutasRoute.js"
 import routerUsuarios from './router/UsuariosRoute.js';
 import routerConductores from './router/ConductoresRoute.js';
 import routerViajes from './router/ViajesRoute.js'
+import routerNovedad from './router/NovedadRoute.js';
 
 
 const app = express();
@@ -19,6 +20,7 @@ app.use('/rutasA', routerRutas);
 app.use('/usuarios',routerUsuarios);
 app.use('/conductores',routerConductores);
 app.use('/programar', routerViajes);
+app.use('/novedades', routerNovedad);
 
 
 app.listen(process.env.PORT, ()=> { 

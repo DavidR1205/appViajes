@@ -61,10 +61,10 @@ const navAdmin = () => {
                 <Link className="nav-link" to="/rutasA" style={{ fontSize: '18px' }}>Rutas</Link>
               </li>
               <li className="nav-item d-flex flex-column align-items-center" style={{ marginRight: '30px' }}>
-                <Link to="/informes">
+                <Link to="/novedades">
                   <img src={informeslogo} alt="Informes Logo" style={{ width: '30px', marginTop: '5px' }} />
                 </Link>
-                <Link className="nav-link" to="/informes" style={{ fontSize: '18px' }}>Informes</Link>
+                <Link className="nav-link" to="/novedades" style={{ fontSize: '18px' }}>Novedades</Link>
               </li>
             </ul>
             <ul className="navbar-nav">
