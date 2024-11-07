@@ -2,12 +2,13 @@ import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 import Swal from 'sweetalert2'
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
+import "../../../assets/css/estilosAdmin/estilosCreates/estilosCreateVeh.css"
 
 const crearVehiculos = () => {
 
     const navigate = useNavigate();
-    const [vehiculos, setVehiculos] = useState({id_vehiculo: '', placa: '', numero_interno: '', marca: '', modelo: '', fecha_soat: '', fecha_tecno: '', fecha_operacion: '', 
+    const [vehiculos, setVehiculos] = useState({placa: '', numero_interno: '', marca: '', modelo: '', fecha_soat: '', fecha_tecno: '', fecha_operacion: '', 
                                                 aseguradora: '', color: '', capacidad: '', tipo_vehiculo: '', chasis: '', nombre_propietario: '', numero_propietario: ''})
 
     
@@ -36,10 +37,6 @@ const crearVehiculos = () => {
                     </div>
                     <div className='elementFormVehiculos'>
                         <div className='section-FormVehiculos'>
-                            <div className='camp-input'>
-                                <label htmlFor="id_vehiculo">Id Vehiculo: </label>
-                                <input type="number" onChange={handleChanges} name='id_vehiculo' className='input-formVehiculos' />
-                            </div>
                             <div className='camp-input'>
                                 <label htmlFor="placa">Placa: </label>
                                 <input type="text" onChange={handleChanges} name='placa' className='input-formVehiculos' />
@@ -100,7 +97,7 @@ const crearVehiculos = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='button-formVehiculos'>
+                    <div className='button-formVehiculos d-grid gap-2'>
                         <button type='submit' className='btn btn-success'>Agregar</button>
                     </div>
                 </form>

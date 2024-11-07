@@ -54,7 +54,7 @@ const viajes = () => {
       const responseF = await finalizarViaje(id_viaje, horaFin, duracion);
       Swal.fire('Finalizado', 'Viaje finalizado con éxito', 'success')
         .then(() => {
-          fetchViajes(); // Refrescar los viajes después de la notificación
+          fetchViajes();
         });
     } catch (error) {
       setError('Error al finalizar el viaje');

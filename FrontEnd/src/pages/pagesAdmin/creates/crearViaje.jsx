@@ -3,6 +3,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom'
+import "../../../assets/css/estilosAdmin/estilosCreates/estilosCreateViaje.css"
 
 const crearViaje = () => {
 
@@ -109,7 +110,7 @@ const crearViaje = () => {
                             </select>
                         </div>
                     </div>
-                    <div className='button-formVehiculos'>
+                    <div className='button-formViaje d-grid gap-2'>
                         <button type='submit' className='btn btn-success'>Agregar</button>
                     </div>
                 </form>
